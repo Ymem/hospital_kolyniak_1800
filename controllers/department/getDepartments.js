@@ -3,12 +3,8 @@ const db = require('../../dataBase').getInstance();
 module.exports = async (req, res) => {
     try {
         const DepartmentModel = db.getModel('Department');
-        const DoctorModel = db.getModel('Doctor');
 
-        let allDepartments = await DepartmentModel.findAll({
-            attributes: ["label", "doctor_id"],
-            include: [DoctorModel]
-        });
+        let allDepartments = await DepartmentModel.findAll();
 
         res.json({
             success: true,

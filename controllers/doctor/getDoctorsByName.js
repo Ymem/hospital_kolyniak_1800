@@ -1,5 +1,5 @@
+const Op = require('sequelize').Op;
 const db = require('../../dataBase').getInstance();
-// const tokenVerifier = require('../../helpers/tokenVerifier');
 
 module.exports = async (req, res) => {
     try {
@@ -11,9 +11,13 @@ module.exports = async (req, res) => {
         if (!name) throw new Error('No doctor name!');
 
         const allDoctors = await DoctorModel.findAll({
-            attributes: ["name", "experience", "description", "phone_num", "floor_num", "office_num", "working_days"],
+            attributes: [
+                "id",
+                "name"],
             where: {
-                name:  `%${name}%`
+                name: {
+                    [Op.like]: `%${name}%`
+                }
             }
         });
 

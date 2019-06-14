@@ -1,5 +1,5 @@
-module.exports = (sequelize, DataTypes) =>
-    sequelize.define('Doctor', {
+module.exports = (sequelize, DataTypes) => {
+    const Doctor = sequelize.define('Doctor', {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true
@@ -30,8 +30,18 @@ module.exports = (sequelize, DataTypes) =>
         },
         password: {
             type: DataTypes.STRING
+        },
+        department_id: {
+            type: DataTypes.INTEGER,
+            foreignKey: true
         }
     }, {
         tableName: 'doctor',
         timestamps: false
     });
+
+    const Department = sequelize.import('./Department.js');
+    Doctor.belongsTo(Department, {foreignKey: 'department_id'});
+
+    return Doctor
+};

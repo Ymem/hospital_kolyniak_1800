@@ -2,19 +2,27 @@ const db = require('../../dataBase').getInstance();
 
 module.exports = async (req, res) => {
     try {
-        const RatingModel = db.getModel('Rating');
-        const PatientModel = db.getModel('Patient');
+
         const DoctorModel = db.getModel('Doctor');
 
-        let Marks = await RatingModel.findAll({
-            attributes: ["label", "doctor_id"],
-            include: [DoctorModel, PatientModel]
+        const id = req.params.id;
+
+        if (!id) throw new Error('No id!');
+
+        const gotDoctors = await DoctorModel.findAll({
+            attributes: [
+                "id",
+                "name"],
+            where: {
+                department_id: id
+            }
         });
 
+        if (!gotDoctors) throw new Error('Doctors from this department do not exist');
 
         res.json({
             success: true,
-            msg: Marks
+            msg: gotDoctors
         });
 
     } catch (e) {
