@@ -10,7 +10,6 @@ module.exports = async (req, res) => {
 
         if (!id) throw new Error('No doctor id!');
 
-        // const gotDoctor = await DoctorModel.findByPk(id);
         const gotDoctor = await DoctorModel.findOne({
             attributes: [
                 "id",

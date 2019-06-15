@@ -5,7 +5,7 @@ module.exports = async (req, res) => {
 
         const DoctorModel = db.getModel('Doctor');
 
-        const id = req.params.id;
+        const department_id = req.params.department_id;
 
         if (!id) throw new Error('No id!');
 
@@ -14,7 +14,7 @@ module.exports = async (req, res) => {
                 "id",
                 "name"],
             where: {
-                department_id: id
+                department_id
             }
         });
 

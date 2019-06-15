@@ -82,3 +82,26 @@ To create database run code in console
                 on update cascade on delete cascade
     )
         charset = utf8;
+        
+    INSERT INTO kolyniak_1800.doctor (id, name, experience, description, phone_num, email, floor_num, office_num, working_days, password, department_id) VALUES (1, 'Ivanov Ivan Ivanovych', 11, 'Very good doctor', 968659852, 'ivanovych@mail.ua', 3, 315, 'Monday to Friday', '159357', 1);
+    INSERT INTO kolyniak_1800.doctor (id, name, experience, description, phone_num, email, floor_num, office_num, working_days, password, department_id) VALUES (2, 'Petrenko Petro Petrovych', 5, 'Good doctor', 968659856, 'petrovych@gmail.com', 1, 111, 'Monday to Friday', '159357', 2);
+    INSERT INTO kolyniak_1800.doctor (id, name, experience, description, phone_num, email, floor_num, office_num, working_days, password, department_id) VALUES (3, 'Denysenko Denys Denysovych ', 20, 'Very good doctor', 968659857, 'denysovych@mail.ua', 2, 222, 'Monday to Friday', '159357', 3);
+    INSERT INTO kolyniak_1800.doctor (id, name, experience, description, phone_num, email, floor_num, office_num, working_days, password, department_id) VALUES (4, 'Vasylenko Vasyl Vasylovych', 1, 'Good doctor', 968659858, 'vasylovych@gmail.com', 1, 116, 'Monday to Friday', '159357', 4);
+    INSERT INTO kolyniak_1800.doctor (id, name, experience, description, phone_num, email, floor_num, office_num, working_days, password, department_id) VALUES (5, 'Bohdan Bohdan Bohdanovych', 3, 'Very good doctor', 968645985, 'bohdanovych@gmail.com', 2, 202, 'Monday to Friday', '159357', 1);
+    INSERT INTO kolyniak_1800.doctor (id, name, experience, description, phone_num, email, floor_num, office_num, working_days, password, department_id) VALUES (6, 'Jariy Jaroslav Jaroslavovych', 13, 'Good doctor', 968689852, 'jaroslavovych@mail.ua', 3, 303, 'Monday to Friday', '159357', 2);
+    INSERT INTO kolyniak_1800.doctor (id, name, experience, description, phone_num, email, floor_num, office_num, working_days, password, department_id) VALUES (7, 'Yurchenko Yurii Yuriyovych', 8, 'Very good doctor', 968119852, 'yuriyovych@mail.ua', 1, 115, 'Monday to Friday', '159357', 3);
+    INSERT INTO kolyniak_1800.doctor (id, name, experience, description, phone_num, email, floor_num, office_num, working_days, password, department_id) VALUES (8, 'Oleskiv Oleksiy Oleksiyovych', 9, 'Good doctor', 988659852, 'oleksiyovych@gmail.com', 1, 119, 'Monday to Friday', '159357', 4);
+    INSERT INTO kolyniak_1800.doctor (id, name, experience, description, phone_num, email, floor_num, office_num, working_days, password, department_id) VALUES (9, 'Zorya Zoryana Zinoviivna', 2, 'Very good doctor', 969959852, 'zinoviivna@mail.ua', 2, 209, 'Monday to Friday', '159357', 1);
+    INSERT INTO kolyniak_1800.doctor (id, name, experience, description, phone_num, email, floor_num, office_num, working_days, password, department_id) VALUES (10, 'Martynovych Marta Mrativna', 6, 'Good doctor', 968899852, 'mrativna@gmail.com', 3, 308, 'Monday to Friday', '159357', 2);
+    INSERT INTO kolyniak_1800.doctor (id, name, experience, description, phone_num, email, floor_num, office_num, working_days, password, department_id) VALUES (11, 'Syva Sophia Sergiivna', 18, 'Very good doctor', 968615932, 'sergiivna@mail.ua', 3, 311, 'Monday to Friday', '159357', 3);
+
+    INSERT INTO kolyniak_1800.patient (id, name, email, password) VALUES (1, 'Kolyniak Denys', 'dankolyniak@gmail.com', '159357');
+    INSERT INTO kolyniak_1800.patient (id, name, email, password) VALUES (2, 'Vlad Patcuta', 'vladpatsuta@gmail.com', '159357');
+    INSERT INTO kolyniak_1800.patient (id, name, email, password) VALUES (3, 'Yurii Maksymiv', 'yramaksymiv@gmail.com', '159357');
+    
+    INSERT INTO kolyniak_1800.department (id, label) VALUES (1, 'Department of Surgery');
+    INSERT INTO kolyniak_1800.department (id, label) VALUES (2, 'Department of Pediatrics');
+    INSERT INTO kolyniak_1800.department (id, label) VALUES (3, 'Department of Traumatology');
+    INSERT INTO kolyniak_1800.department (id, label) VALUES (4, 'Department of Oncology');
+    
+    
