@@ -7,7 +7,7 @@ module.exports = async (req, res) => {
 
         const department_id = req.params.department_id;
 
-        if (!id) throw new Error('No id!');
+        if (!department_id) throw new Error('No department_id!');
 
         const gotDoctors = await DoctorModel.findAll({
             attributes: [
