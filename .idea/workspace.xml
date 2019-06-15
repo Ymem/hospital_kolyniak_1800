@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7748e2ac-9a8c-4388-b2b4-9d673e8fde6f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/doctor/changeDoctorInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/doctor.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/doctor.js" afterDir="false" />
-    </list>
+    <list default="true" id="7748e2ac-9a8c-4388-b2b4-9d673e8fde6f" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -57,7 +52,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/doctor/rating/getRating.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
@@ -93,7 +88,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/doctor/changeDoctorInfo.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
@@ -294,7 +289,7 @@
       <updated>1560348787096</updated>
       <workItem from="1560348788964" duration="15586000" />
       <workItem from="1560420482680" duration="17227000" />
-      <workItem from="1560504480956" duration="48810000" />
+      <workItem from="1560504480956" duration="49095000" />
     </task>
     <task id="LOCAL-00001" summary="some changes">
       <created>1560524438092</created>
@@ -307,7 +302,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81623000" />
+    <option name="totallyTimeSpent" value="81908000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -544,13 +539,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/doctor/changeDoctorInfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -607,6 +595,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="31" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/doctor/changeDoctorInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>

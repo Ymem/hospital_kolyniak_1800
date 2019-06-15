@@ -1,3 +1,5 @@
+Link to Postman requests collection: https://www.getpostman.com/collections/397009b3251b07b52820
+
 To create database run code in console
 
     create schema if not exists kolyniak_1800
