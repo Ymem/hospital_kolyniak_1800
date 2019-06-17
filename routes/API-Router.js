@@ -10,7 +10,7 @@ ApiRouter.use('/departments', departmentRouter);
 ApiRouter.use('/', doctorRouter);
 ApiRouter.use('/login', authRouter);
 ApiRouter.use('/patient', patientRouter);
-ApiRouter.use('/doctor/:id/comments', commentsRouter);
+ApiRouter.use('/doctor', commentsRouter);
 ApiRouter.use('/doctor', ratingRouter);
 
 module.exports = ApiRouter;

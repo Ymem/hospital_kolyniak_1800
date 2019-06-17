@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: true
         },
         mark: {
-            type: DataTypes.FLOAT
+            type: DataTypes.INTEGER
         },
         patient_id: {
             type: DataTypes.INTEGER,
