@@ -11,6 +11,6 @@ ApiRouter.use('/', doctorRouter);
 ApiRouter.use('/login', authRouter);
 ApiRouter.use('/patient', patientRouter);
 ApiRouter.use('/doctor/:id/comments', commentsRouter);
-ApiRouter.use('/doctor/:id/rating', ratingRouter);
+ApiRouter.use('/doctor', ratingRouter);
 
 module.exports = ApiRouter;

@@ -17,13 +17,15 @@ module.exports = async (req, res) => {
 
         if (!gotMarks) throw new Error('Marks for this doctor do not exist!');
 
+        const numOfMarks = gotMarks.length;
         let sumOfMarks = 0;
-        gotMarks.forEach((mark) => sumOfMarks + mark);
-        const Rating = sumOfMarks / gotMarks.length;
+        gotMarks.forEach((Rating) => sumOfMarks += Rating.mark);
+        const avgMark = (sumOfMarks / numOfMarks).toFixed(2);
 
         res.json({
             success: true,
-            msg: Rating
+            numOfVotes: numOfMarks,
+            rating: avgMark
         });
 
     } catch (e) {
