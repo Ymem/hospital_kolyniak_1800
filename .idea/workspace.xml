@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7748e2ac-9a8c-4388-b2b4-9d673e8fde6f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/doctor/answers/changeAnswer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/doctor/answers/createNewAnswer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/doctor/answers/getAnswers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dataBase/models/Answer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/doctor/changeDoctorInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/doctor/changeDoctorInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/doctor/comments/changeComment.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/doctor/comments/changeComment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/doctor/comments/createNewComment.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/doctor/comments/createNewComment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/doctor/comments/deleteComment.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/doctor/comments/deleteComment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/doctor/comments/getComments.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/doctor/comments/getComments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/doctor/getDoctorsFromDepartment.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/department/getDoctorsFromDepartment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/doctor/rating/changeRating.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/doctor/rating/changeRating.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/doctor/rating/getRating.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/doctor/rating/getRating.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helpers/tokenizer.js" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/tokenizer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/API-Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/API-Router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/comments.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/department.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/department.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/doctor.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/doctor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/rating.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -318,7 +299,7 @@
       <workItem from="1560348788964" duration="15586000" />
       <workItem from="1560420482680" duration="17227000" />
       <workItem from="1560504480956" duration="51963000" />
-      <workItem from="1561228251022" duration="33653000" />
+      <workItem from="1561228251022" duration="34164000" />
     </task>
     <task id="LOCAL-00001" summary="some changes">
       <created>1560524438092</created>
@@ -331,11 +312,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120408000" />
+    <option name="totallyTimeSpent" value="120919000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
