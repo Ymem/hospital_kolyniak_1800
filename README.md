@@ -69,6 +69,17 @@ To create database run code in console
                 on update cascade
     );
     
+    create table if not exists answers
+    (
+        id         int auto_increment
+            primary key,
+        comment_id int  null,
+        answer     text not null,
+        constraint answers_comments_id_fk
+            foreign key (comment_id) references comments (id)
+                on update cascade on delete cascade
+    );
+    
     create table if not exists rating
     (
         id         int auto_increment
@@ -140,40 +151,21 @@ To create database run code in console
     INSERT INTO kolyniak_1800.comments (id, doctor_id, comment, patient_id) VALUES (32, 2, 'good', 2);
     INSERT INTO kolyniak_1800.comments (id, doctor_id, comment, patient_id) VALUES (33, 3, 'bad', 3);
     
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (1, 1, 10, 1);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (2, 4, 5, 2);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (3, 1, 6, 3);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (4, 1, 1, 1);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (5, 2, 5, 2);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (6, 5, 8, 3);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (7, 8, 9, 1);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (8, 5, 5, 2);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (9, 4, 8, 3);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (10, 8, 7, 1);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (11, 6, 9, 3);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (12, 2, 9, 2);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (13, 4, 10, 1);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (14, 2, 7, 2);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (15, 3, 2, 3);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (16, 8, 9, 1);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (17, 8, 10, 2);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (18, 2, 4, 3);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (19, 1, 10, 1);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (20, 4, 5, 2);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (21, 1, 6, 3);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (22, 1, 1, 1);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (23, 2, 5, 2);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (24, 5, 8, 3);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (25, 8, 9, 1);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (26, 5, 5, 2);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (27, 4, 8, 3);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (28, 8, 7, 1);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (29, 6, 9, 2);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (30, 2, 9, 3);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (31, 4, 10, 1);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (32, 2, 7, 2);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (33, 3, 2, 3);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (34, 8, 9, 3);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (35, 8, 10, 1);
-    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (36, 2, 4, 2);
+    INSERT INTO kolyniak_1800.answers (id, comment_id, answer) VALUES (1, 1, 'ok');
+    INSERT INTO kolyniak_1800.answers (id, comment_id, answer) VALUES (2, 2, 'no');
     
+    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (1, 1, 10, 1);
+    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (3, 1, 6, 3);
+    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (5, 2, 5, 2);
+    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (18, 2, 4, 3);
+    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (15, 3, 2, 3);
+    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (39, 3, 10, 1);
+    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (2, 4, 5, 2);
+    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (9, 4, 8, 3);
+    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (13, 4, 10, 1);
+    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (6, 5, 8, 3);
+    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (8, 5, 5, 2);
+    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (11, 6, 9, 3);
+    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (29, 6, 9, 2);
+    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (17, 8, 10, 2);
+    INSERT INTO kolyniak_1800.rating (id, doctor_id, mark, patient_id) VALUES (34, 8, 9, 3);

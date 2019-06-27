@@ -5,7 +5,7 @@ module.exports = async (req, res) => {
     try {
         const DoctorModel = db.getModel('Doctor');
 
-        const {description, phone_num, email, floor_num, office_num, working_days, password, new_password} = req.body;
+        const {description, phone_num, email, floor_num, office_num, working_days, password, new_password = password} = req.body;
 
         if (!email || !password) throw new Error('Some necessary field is empty!');
 
@@ -39,7 +39,7 @@ module.exports = async (req, res) => {
                 password
             }
         });
-        if (!changedDoctor) throw new Error('Comment is NOT changed!');
+        if (!changedDoctor[0]) throw new Error('Comment is NOT changed!');
 
         res.json({
             success: true,

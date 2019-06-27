@@ -3,8 +3,11 @@ const tokenVerifier = require('../../../helpers/tokenVerifier');
 
 module.exports = async (req, res) => {
     try {
-        const PatientModel = db.getModel('Patient');
-        const CommentModel = db.getModel('Comment');
+        const DoctorModel = db.getModel('Doctor');
+        const AnswerModel = db.getModel('Answer');
+
+        const {answer} = req.body;
+        if (!answer) throw new Error('No answer!');
 
         const comment_id = req.params.id;
         if (!comment_id) throw new Error('No comment id!');
@@ -12,27 +15,28 @@ module.exports = async (req, res) => {
         const token = req.get('Authorization');
         if (!token) throw new Error('No token');
 
-        const {id: patient_id, name: userName} = tokenVerifier(token);
+        const {id, name} = tokenVerifier(token);
 
-        const isPresent = await PatientModel.findOne({
+        const isPresent = await DoctorModel.findOne({
             where: {
-                id: patient_id,
-                name: userName
+                id,
+                name
             }
         });
-        if (!isPresent) throw new Error('Not valid patient!');
+        if (!isPresent) throw new Error('Not valid doctor!');
 
-        const deletedComment = await CommentModel.destroy({
+        const changedAnswer = await AnswerModel.update({
+            answer
+        }, {
             where: {
-                id: comment_id,
-                patient_id
+                comment_id
             }
         });
-        if (!deletedComment) throw new Error('Comment is NOT deleted!');
+        if (!changedAnswer[0]) throw new Error('Answer is NOT changed!');
 
         res.json({
             success: true,
-            msg: "Comment deleted"
+            msg: changedAnswer
         });
     } catch (e) {
         console.log(e);

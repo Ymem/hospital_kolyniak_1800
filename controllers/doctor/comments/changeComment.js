@@ -7,10 +7,10 @@ module.exports = async (req, res) => {
         const CommentModel = db.getModel('Comment');
 
         const {comment} = req.body;
-        if (!id) throw new Error('No comment to change!');
+        if (!comment) throw new Error('No comment to change!');
 
-        const id = req.params.id;
-        if (!id) throw new Error('No comment id!');
+        const comment_id = req.params.id;
+        if (!comment_id) throw new Error('No comment id!');
 
         const token = req.get('Authorization');
         if (!token) throw new Error('No token');
@@ -29,11 +29,11 @@ module.exports = async (req, res) => {
             comment
         }, {
             where: {
-                id,
+                id: comment_id,
                 patient_id
             }
         });
-        if (!changedComment) throw new Error('Comment is NOT changed!');
+        if (!changedComment[0]) throw new Error('Comment is NOT changed!');
 
         res.json({
             success: true,

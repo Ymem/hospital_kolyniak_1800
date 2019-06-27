@@ -10,7 +10,7 @@ module.exports = async (req, res) => {
         if (!comment) throw new Error('No comment!');
 
         const doctor_id = req.params.id;
-        if (!id) throw new Error('No doctor id!');
+        if (!doctor_id) throw new Error('No doctor id!');
 
         const token = req.get('Authorization');
         if (!token) throw new Error('No token');

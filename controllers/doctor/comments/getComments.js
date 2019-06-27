@@ -11,7 +11,8 @@ module.exports = async (req, res) => {
 
         const gotComments = await CommentModel.findAll({
             attributes: [
-                "label",
+                "id",
+                "comment",
                 "patient_id"],
             where: {
                 doctor_id: id
